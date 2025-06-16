@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>pluss.dev Portfolio</title>
+  <link rel="icon" href="img/logo.png" type="">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+          publicKey: "FQFfUge6tZbYpTtvE",
+        });
+    })();
+  </script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <div class="logo" style="display: flex; align-items: center;">
+          <img draggable="false" src="img/logo.png" alt="" style="width: 35px; height: 35px;">
+          <p> pluss.dev</p>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <div class="nav-links">
+          <button class="weighttedbutton" onclick="scrollToSection('about')" data-en="About" data-fr="À propos"><b>About</b></button>
+          <button class="weighttedbutton" onclick="scrollToSection('e-commerce')" data-en="Services" data-fr="Services"><b>Services</b></button>
+          <button class="weighttedbutton" onclick="scrollToSection('portfolio')" data-en="Portfolio" data-fr="Portfolio"><b>Portfolio</b></button>
+          <button class="weighttedbutton" onclick="scrollToSection('packs')" data-en="Packs" data-fr="Packs"><b>Packs</b></button>
+          <button class="weighttedbutton" onclick="scrollToSection('contact')" data-en="Contact" data-fr="Contact"><b>Contact</b></button>
+          
+          <!-- Language Selector -->
+          <div class="language-selector">
+            <button class="language-btn">
+              <i data-lucide="globe"></i>
+              <span id="current-language">EN</span>
+              <i data-lucide="chevron-down" class="dropdown-icon"></i>
+            </button>
+            <div class="language-dropdown">
+              <a href="#" class="language-option active" data-lang="en">English</a>
+              <a href="#" class="language-option" data-lang="fr">Français</a>
+            </div>
+          </div>
+          
+          <!-- Dark Mode Toggle -->
+          <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+            <i data-lucide="sun" class="light-icon"></i>
+            <i data-lucide="moon" class="dark-icon"></i>
+          </button>
+        </div>
+
+        <!-- Mobile menu button and dark mode toggle for mobile -->
+        <div class="mobile-controls">
+          <!-- Language Selector Mobile -->
+          <div class="language-selector mobile">
+            <button class="language-btn">
+              <i data-lucide="globe"></i>
+              <span id="mobile-current-language">EN</span>
+              <i data-lucide="chevron-down" class="dropdown-icon"></i>
+            </button>
+            <div class="language-dropdown">
+              <a href="#" class="language-option active" data-lang="en">English</a>
+              <a href="#" class="language-option" data-lang="fr">Français</a>
+            </div>
+          </div>
+          
+          <button id="darkModeToggleMobile" class="dark-mode-toggle" aria-label="Toggle dark mode">
+            <i data-lucide="sun" class="light-icon"></i>
+            <i data-lucide="moon" class="dark-icon"></i>
+          </button>
+          <button class="mobile-menu-btn">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-menu">
+      <button class="weighttedbutton" onclick="scrollToSection('about')" data-en="About" data-fr="À propos">About</button>
+      <button class="weighttedbutton" onclick="scrollToSection('e-commerce')" data-en="Services" data-fr="Services">Services</button>
+      <button class="weighttedbutton" onclick="scrollToSection('portfolio')" data-en="Portfolio" data-fr="Portfolio">Portfolio</button>
+      <button class="weighttedbutton" onclick="scrollToSection('packs')" data-en="Packs" data-fr="Packs">Packs</button>
+      <button class="weighttedbutton" onclick="scrollToSection('contact')" data-en="Contact" data-fr="Contact">Contact</button>
+      
+      <!-- Language Selector in Mobile Menu -->
+      <div class="language-selector-mobile">
+        <span class="language-label" data-en="Language:" data-fr="Langue:">Language:</span>
+        <div class="language-options">
+          <a href="#" class="language-option active" data-lang="en">English</a>
+          <a href="#" class="language-option" data-lang="fr">Français</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <img class="hidden-element" src="img/pluss.png" alt="" draggable="false" style="height:120px; width: auto;">
+
+        <!-- Replace the h1 in your hero section with this -->
+        <div class="typing-container-wrapper hidden-element">
+          <h1 class="typing-container" style="line-height: 0.9; margin-bottom: 35px; margin-top: 20px;">
+            <div class="typing-area">
+              <span id="typing-text"></span>
+              <span class="cursor"></span>
+            </div>
+          </h1>
+        </div>
+           <div class="titleresizer">
+              <p class="hidden-element"  data-en="Full-stack web developer & E-commerce stores realizer" data-fr="Développeur web full-stack & Créateur de boutiques ecom">Full-stack web developer & E-commerce stores realizer</p>
+           </div>
+           <button onclick="scrollToSection('portfolio')" class="hidden-element linktree-button" >
+          <span>our work</span>
+            <i data-lucide="folder-code"></i>
+            </button>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 data-en="About Me" data-fr="À propos de moi">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p data-en="<b>I'm mehdi,</b> a passionate web developer with expertise in creating georgeous and functional <b>websites and E commerce shops</b>. With experience in both <b>front-end and back-end development,</b> I bring ideas to life through clean code and modern design principles." 
+             data-fr="<b>Je suis Mehdi,</b> un développeur web passionné avec une expertise dans la création de <b>sites web et boutiques e-commerce</b> magnifiques et fonctionnels. Avec de l'expérience en <b>développement front-end et back-end,</b> je donne vie aux idées grâce à un code propre et des principes de conception modernes.">
+            <b>I'm mehdi,</b> a passionate web developer with expertise in creating georgeous and functional <b>websites and E commerce shops</b>.
+            With experience in both <b>front-end and back-end development,</b> I bring ideas to life through clean code and modern design principles.
+          </p>
+          <p data-en="My approach combines <b>technical excellence</b> with <b>creative problem-solving</b> and <b>excellent communication</b> for client satisfaction, ensuring that every project not only meets but exceeds expectations."
+             data-fr="Mon approche combine <b>l'excellence technique</b> avec <b>la résolution créative de problèmes</b> et <b>une excellente communication</b> pour la satisfaction du client, garantissant que chaque projet non seulement répond mais dépasse les attentes.">
+            My approach combines <b>technical excellence</b> with <b>creative problem-solving</b> and <b>excellent communication</b> for client satisfaction, ensuring that every project not only meets but exceeds expectations.
+          </p>
+          
+          <div class="social-links">
+            <a href="https://github.com/mehdevv" target="_blank" rel="noopener noreferrer">
+              <i data-lucide="github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/kernou-mehdi-816653284/" target="_blank" rel="noopener noreferrer">
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a href="/cdn-cgi/l/email-protection#b9d2dccbd7d6ccd4dcd1ddd0888ef9ded4d8d0d597dad6d4">
+                <i data-lucide="mail"></i>
+            </a>
+            <a href="https://instagram.com/pluss.dev" target="_blank">
+               <i data-lucide="instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="about-image">
+          <img draggable="false" src="https://images.unsplash.com/photo-1544256718-3bcf237f3974?auto=format&fit=crop&q=80" alt="Working on code">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- E-Commerce Section -->
+  <section id="e-commerce" class="e-commerce">
+    <div class="container">
+      <h2 data-en="Services" data-fr="Services">Services</h2>
+      <div class="e-commerce-grid" id="e-commerce-grid"></div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2 data-en="Portfolio" data-fr="Portfolio">Portfolio</h2>
+      <div class="portfolio-grid" id="portfolio-grid"></div>
+    </div>
+  </section>
+
+  <!-- Packs Section with updated background color -->
+  <section id="packs" class="portfolio packs-section">
+    <div class="container">
+      <h2 data-en="Packs" data-fr="Packs">Packs</h2>
+      <div class="packs-grid" id="packs-grid"></div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 data-en="Get In Touch" data-fr="Contactez-moi">Get In Touch</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3 data-en="Let's work together" data-fr="Travaillons ensemble">Let's work together</h3>
+          <p data-en="Have a project in mind or need a custom solution? Fill out the form and I'll get back to you as soon as possible." 
+             data-fr="Vous avez un projet en tête ou besoin d'une solution personnalisée ? Remplissez le formulaire et je vous répondrai dès que possible.">
+            Have a project in mind or need a custom solution? Fill out the form and I'll get back to you as soon as possible.
+          </p>
+        
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <i data-lucide="phone"></i>
+              <div>
+                <h4 data-en="Phone" data-fr="Téléphone">Phone</h4>
+                <p>+213 542 452 129</p>
+              </div>
+            </div>
+          
+            <div class="contact-detail-item">
+              <i data-lucide="mail"></i>
+              <div>
+                <h4 data-en="Email" data-fr="Email">Email</h4>
+                <p>kernoumehdi17@gmail.com</p>
+              </div>
+            </div>
+          
+            <div class="contact-detail-item">
+              <i data-lucide="map-pin"></i>
+              <div>
+                <h4 data-en="Location" data-fr="Localisation">Location</h4>
+                <p data-en="Algiers, Algeria" data-fr="alger, Algérie">Algiers, Algeria</p>
+              </div>
+            </div>
+          </div>
+          <br><br><br><br><br><br><br><br>
+          <div class="contact-social">
+            <a href="https://github.com/mehdevv" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i data-lucide="github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/kernou-mehdi-816653284/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a href="https://instagram.com/pluss.dev" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i data-lucide="instagram"></i>
+            </a>
+            <a href="https://wa.me/213542452129" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <i data-lucide="message-circle"></i>
+            </a>
+          </div>
+        </div>
+      
+        <div class="contact-form-container">
+          <form id="contactForm" class="contact-form">
+            <div class="form-header">
+              <h3 data-en="Send us a message" data-fr="Envoyez-nous un message">Send us a message</h3>
+              <p data-en="Selected Service:" data-fr="Service sélectionné:">Selected Service: <span id="selectedService">None</span></p>
+            </div>
+            
+            <div class="form-group animate-field">
+              <label for="name" data-en="Full Name" data-fr="Nom complet">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="" required>
+            </div>
+          
+            <div class="form-group animate-field">
+              <label for="email" data-en="Email Address" data-fr="Adresse email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="" required>
+            </div>
+          
+            <div class="form-group animate-field">
+              <label for="subject" data-en="Subject" data-fr="Sujet">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="" required>
+            </div>
+          
+            <div class="form-group animate-field">
+              <label for="message" data-en="Message" data-fr="Message">Message</label>
+              <textarea id="message" name="message" placeholder="" rows="5" required></textarea>
+            </div>
+            
+            <input type="hidden" id="serviceType" name="serviceType">
+          
+            <button type="submit" class="submit-btn animate-field" onclick="sendMail()">
+              <span data-en="Send Message" data-fr="Envoyer le message">Send Message</span>
+              <i data-lucide="send"></i>
+            </button>
+          </form>
+        
+          <div id="formSuccess" class="form-message success">
+            <i data-lucide="check-circle"></i>
+            <p data-en="Thank you for your message! I'll get back to you as soon as possible." 
+               data-fr="Merci pour votre message ! Je vous répondrai dès que possible.">
+              Thank you for your message! I'll get back to you as soon as possible.
+            </p>
+            <button id="returnToForm" class="return-btn" data-en="Send Another Message" data-fr="Envoyer un autre message">
+              Send Another Message
+            </button>
+          </div>
+        
+          <div id="formError" class="form-message error">
+            <i data-lucide="alert-circle"></i>
+            <p data-en="There was an error sending your message. Please try again." 
+               data-fr="Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer.">
+              There was an error sending your message. Please try again.
+            </p>
+            <button id="returnToFormError" class="return-btn" data-en="Try Again" data-fr="Réessayer">
+              Try Again
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Animation -->
+  <div class="success-animation" id="successAnimation">
+    <div class="success-icon">
+      <svg viewBox="0 0 24 24" width="100" height="100">
+        <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1.177-7.86l-2.765-2.767L7 12.431l3.823 3.826L16 10.958l-1.06-1.06-4.117 4.242z" fill="currentColor"></path>
+      </svg>
+    </div>
+    <h2 class="success-message" data-en="Message Sent Successfully!" data-fr="Message envoyé avec succès !">Message Sent Successfully!</h2>
+    <p class="success-description" data-en="We'll get back to you shortly." data-fr="Nous vous répondrons sous peu.">We'll get back to you shortly.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="background-color: rgba(255, 255, 255, 0.05);">
+      <p>© 2025 <a href="https://www.instagram.com/pluss.dev" class="alink"><b>@pluss.dev</b></a> . <span data-en="All rights reserved." data-fr="Tous droits réservés.">All rights reserved.</span></p>
+    </div>
+  </footer>
+
+  <!-- Personal Visit Card Button -->
+  <button id="visitCardBtn" class="visit-card-btn" aria-label="Open visit card">
+    <i data-lucide="id-card"></i>
+  </button>
+
+  <!-- Personal Visit Card Modal -->
+  <div id="visitCardModal" class="visit-card-modal">
+    <div class="visit-card-content">
+      <button class="close-modal" id="closeVisitCard">&times;</button>
+      
+      <div class="visit-card">
+        <div class="visit-card-header">
+          <div class="visit-card-profile">
+            <img src="img/me.jpg" alt="Mehdi Kernou">
+          </div>
+          <div class="visit-card-name">Mehdi Kernou</div>
+          <div class="visit-card-actions">
+            <a href="tel:213542452129" class="visit-card-action">
+              <i class="fas fa-phone"></i>
+              <span data-en="CALL" data-fr="APPELER">CALL</span>
+            </a>
+            <a href="mailto:kernoumehdi17@gmail.com" class="visit-card-action">
+              <i class="fas fa-envelope"></i>
+              <span data-en="EMAIL" data-fr="EMAIL">EMAIL</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="visit-card-info">
+          <div class="visit-card-item">
+            <span class="visit-card-label" data-en="Name:" data-fr="Nom:">Name:</span>
+            <span class="visit-card-value">Mehdi Kernou</span>
+          </div>
+          <div class="visit-card-item">
+            <span class="visit-card-label" data-en="Position:" data-fr="Poste:">Position:</span>
+            <span class="visit-card-value" data-en="Full-stack Developer" data-fr="Développeur Full-stack">Full-stack Developer</span>
+          </div>
+        </div>
+
+        <div class="visit-card-contact">
+          <div class="visit-card-contact-item">
+            <div class="visit-card-contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="visit-card-contact-details">
+              <a href="tel:213542452129" class="visit-card-contact-value">+213 542 452 129</a>
+              <div class="visit-card-contact-label" data-en="Mobile" data-fr="Mobile">Mobile</div>
+            </div>
+          </div>
+          <div class="visit-card-contact-item">
+            <div class="visit-card-contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="visit-card-contact-details">
+              <a href="mailto:kernoumehdi17@gmail.com" class="visit-card-contact-value"><span class="__cf_email__"><span class="__cf_email__" ><span class="__cf_email__" >kernoumehdi17@gmail.com</span></span></span></a>
+              <div class="visit-card-contact-label" data-en="Email" data-fr="Email">Email</div>
+            </div>
+          </div>
+          <div class="visit-card-contact-item">
+            <div class="visit-card-contact-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <div class="visit-card-contact-details">
+              <a href="https://mehdevv.github.io/pluss.dev/" target="_blank" class="visit-card-contact-value">pluss.dev</a>
+              <div class="visit-card-contact-label" data-en="Website" data-fr="Site web">Website</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="visit-card-download" id="downloadVcard">
+          <i class="fas fa-download"></i><span data-en="Download Visit Card" data-fr="Télécharger la carte de visite">Download Visit Card</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
