@@ -540,7 +540,7 @@ function createPortfolioCard(project) {
 
   card.innerHTML = `
     <div class="card-image">
-      <img src="${project.image}" alt="${project.title}">
+      <img src="${project.image}" loading="lazy" alt="${project.title}">
     </div>
     <div class="card-content">
       <h3 class="card-title">${project.title}</h3>
@@ -550,7 +550,7 @@ function createPortfolioCard(project) {
           .map(
             (tech) => `
           <span class="tech-tag">
-            <img src="${tech.icon}" alt="${tech.name}" class="tech-icon" title="${tech.name}">
+            <img src="${tech.icon}" loading="lazy" alt="${tech.name}" class="tech-icon" title="${tech.name}">
           </span>
         `,
           )
@@ -581,7 +581,7 @@ function createEcommerceCard(project) {
 
   card.innerHTML = `
     <div class="card-image">
-      <img src="${project.image}" alt="${project.title}">
+      <img src="${project.image}" loading="lazy" alt="${project.title}">
     </div>
     <div class="card-content">
       <div class="card-header">
@@ -616,7 +616,7 @@ function createPackCard(project) {
 
   card.innerHTML = `
     <div class="card-image">
-      <img src="${project.image}" alt="${project.title}">
+      <img src="${project.image}" loading="lazy" alt="${project.title}">
     </div>
     <div class="card-content packsheight">
       <div class="card-header">
@@ -973,6 +973,34 @@ const packsProjects = [
 
 // Portfolio projects data with French translations
 const projects = [
+  {
+    title: "Step by step school website",
+    description:
+      "This website is designed for Step by Step School to present key information about the institution, including its values, academic offerings, student activities, and admission process. It features a clean and user-friendly layout that makes it easy for visitors to explore the school's highlights. The site includes sections for program details, community feedback, and a contact form for inquiries and further communication.",
+    descriptionFr:
+      "Ce site web est conçu pour Step by Step School afin de présenter les informations essentielles sur l’établissement, telles que ses valeurs, ses programmes académiques, ses activités scolaires et le processus d’admission. Il propose une mise en page claire et conviviale, permettant aux visiteurs de découvrir facilement les points forts de l’école. Le site comprend des sections dédiées aux détails des programmes, aux témoignages de la communauté et à un formulaire de contact pour toute demande d'information.",
+    image: "img/ST.png",
+    technologies: [
+      { name: "React", icon: "img/react.png" },
+      { name: "Tailwind", icon: "img/tailwindcss.png" },
+    ],
+    demoUrl: "https://kahina-vert.vercel.app/#",
+  },
+  {
+    title: "Digital valley club wbeiste",
+    description:
+      "This landing page is created for Digital Valley Club to highlight its vibrant community, showcase member benefits, and provide essential contact information. Designed with a modern, visually appealing, and user-friendly layout, the page features dedicated sections for collaborations, member profiles, and a contact form for inquiries and membership applications.",
+    descriptionFr:
+      "Cette page de destination a été créée pour le Digital Valley Club afin de mettre en valeur sa communauté dynamique, de présenter les avantages réservés aux membres et de fournir les informations de contact essentielles. Conçue avec une mise en page moderne, esthétique et facile à utiliser, la page comprend des sections dédiées aux collaborations, aux profils des membres ainsi qu’un formulaire de contact pour les demandes d'information et d'adhésion.",
+    image: "img/DV.png",
+    technologies: [
+      { name: "HTML", icon: "img/html-icon.png" },
+      { name: "CSS", icon: "img/css-icon.png" },
+      { name: "JS", icon: "img/js-icon.png" },
+      { name: "Sass", icon: "img/Sass.png" },
+    ],
+    demoUrl: "https://digitalvalleyclub.netlify.app",
+  },
   {
     title: "kahina vert hotel website",
     description:
