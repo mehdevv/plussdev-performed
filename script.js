@@ -992,14 +992,14 @@ const projects = [
       "This landing page is created for Digital Valley Club to highlight its vibrant community, showcase member benefits, and provide essential contact information. Designed with a modern, visually appealing, and user-friendly layout, the page features dedicated sections for collaborations, member profiles, and a contact form for inquiries and membership applications.",
     descriptionFr:
       "Cette page de destination a été créée pour le Digital Valley Club afin de mettre en valeur sa communauté dynamique, de présenter les avantages réservés aux membres et de fournir les informations de contact essentielles. Conçue avec une mise en page moderne, esthétique et facile à utiliser, la page comprend des sections dédiées aux collaborations, aux profils des membres ainsi qu’un formulaire de contact pour les demandes d'information et d'adhésion.",
-    image: "img/DV.png",
+    image: "img/DV.gif",
     technologies: [
       { name: "HTML", icon: "img/html-icon.png" },
       { name: "CSS", icon: "img/css-icon.png" },
       { name: "JS", icon: "img/js-icon.png" },
       { name: "Sass", icon: "img/Sass.png" },
     ],
-    demoUrl: "https://digitalvalleyclub.netlify.app",
+    demoUrl: "https://digitalvalleys.net",
   },
   {
     title: "kahina vert hotel website",
